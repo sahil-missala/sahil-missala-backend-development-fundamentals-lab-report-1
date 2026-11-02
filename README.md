@@ -6,123 +6,139 @@
 
 ## Aim
 
-To create and run a basic Node.js HTTP server and an Express.js server, define routes, and test the responses using a web browser and its developer tools.
+To create and run a basic Node.js HTTP server and an Express.js server, define routes, and test their responses using a web browser and developer tools.
 
 ## Requirements
 
 - Node.js and npm
 - Express.js
-- A web browser (Zen Browser / Firefox)
-- A code editor
+- Zen Browser / Firefox
+- Code editor
 
-## Project structure
+## Project Structure
 
 ```text
 Lab 1/
-├── server.js
+├── node_modules/
+├── screenshots/
+│   ├── Screenshot 2026-11-02 093228.png
+│   ├── Screenshot 2026-11-02 093508.png
+│   ├── Screenshot 2026-11-02 093721.png
+│   ├── Screenshot 2026-11-02 094148.png
+│   ├── Screenshot 2026-11-02 095230.png
+│   ├── Screenshot 2026-11-02 095246.png
+│   ├── Screenshot 2026-11-02 095618.png
+│   └── Screenshot 2026-11-02 095909(1).png
+├── .gitignore
 ├── express.js
 ├── package.json
 ├── package-lock.json
-├── node_modules/       # installed dependencies (not committed)
-├── screenshots/
-│   ├── 01-project-setup.png
-│   ├── 02-express-installation.png
-│   ├── 03-localhost-browser.png
-│   ├── 04-root-route-network.png
-│   ├── 05-root-route-hello-welcome.png
-│   ├── 06-time-route.png
-│   ├── 07-about-route.png
-│   └── 08-not-found-route.png
-└── README.md
+├── README.md
+└── server.js
 ```
 
 ## Task 1 — Initialize the Node.js project and install Express
 
-The project was initialized using:
+The project was initialized with npm and Express was installed using the following commands:
 
 ```bash
 npm init -y
 npm install express
 ```
 
-The `package.json` file stores the project metadata and dependency information. Express was installed using npm.
+The `package.json` file contains project information and dependency details.
+
+### Screenshots
+
+![Project initialization using npm](<screenshots/Screenshot 2026-11-02 093228.png>)
+
+![Installing Express](<screenshots/Screenshot 2026-11-02 093508.png>)
 
 ## Task 2 — Create a plain Node.js HTTP server
 
-The built-in `http` module is used in `server.js`. The server sends the plain-text response `Hello` and listens on port `3000`.
+The `server.js` file uses Node.js's built-in `http` module and `http.createServer()` to return the plain-text response `Hello`. The server listens on port `3000`.
 
-Run this version with:
+Run the server:
 
 ```bash
 node server.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to test it.
+Open [http://localhost:3000](http://localhost:3000) in the browser.
+
+### Screenshot
+
+![Plain Node.js server response](<screenshots/Screenshot 2026-11-02 093721.png>)
 
 ## Task 3 — Create an Express server and routes
 
-The Express implementation is in `express.js`. It defines the following endpoints:
+The Express server is implemented in `express.js`. It contains these routes:
 
-| Route | Response |
+| HTTP route | Response |
 |---|---|
 | `GET /` | `Hello Welcome` |
-| `GET /about` | JSON containing the name and section |
+| `GET /about` | JSON object containing the name and section |
 | `GET /time` | Current date and time |
-| Any unmatched route | `404 - Page Not Found` with HTTP status 404 |
+| Unmatched route | `404 - Page Not Found` |
 
-Run the Express server with:
+Start the Express server:
 
 ```bash
 node express.js
 ```
 
-Visit the following URLs in your browser:
+Test the routes in the browser:
 
 - [http://localhost:3000/](http://localhost:3000/)
 - [http://localhost:3000/about](http://localhost:3000/about)
 - [http://localhost:3000/time](http://localhost:3000/time)
-- [http://localhost:3000/abc](http://localhost:3000/abc) — tests the 404 handler
+- [http://localhost:3000/abc](http://localhost:3000/abc) — unmatched route
 
-> **Note:** `server.js` and `express.js` both use port 3000. Run only one server at a time. Stop the running server with `Ctrl + C` before starting the other.
+### Screenshots
 
-## Screenshots / Evidence
+**Root route response**
 
-### 1. Project setup and package initialization
+![Root route response](<screenshots/Screenshot 2026-11-02 094148.png>)
 
-![Project setup and package.json](screenshots/01-project-setup.png)
+**Root route in browser developer tools**
 
-### 2. Express installation
+![Root route network response](<screenshots/Screenshot 2026-11-02 095230.png>)
 
-![Express installation using npm](screenshots/02-express-installation.png)
+**Time route response**
 
-### 3. Browser opened at localhost:3000
+![Time route response](<screenshots/Screenshot 2026-11-02 095246.png>)
 
-![Localhost browser](screenshots/03-localhost-browser.png)
+**About route response**
 
-### 4. Root route response in Developer Tools
+![About route response](<screenshots/Screenshot 2026-11-02 095618.png>)
 
-![Root route network response](screenshots/04-root-route-network.png)
+**404 route response**
 
-### 5. Express root route — Hello Welcome
+![404 page not found response](<screenshots/Screenshot 2026-11-02 095909(1).png>)
 
-![Root route Hello Welcome](screenshots/05-root-route-hello-welcome.png)
+## How to Run
 
-### 6. Time route response
+1. Open a terminal in the project folder.
+2. Install dependencies if needed:
 
-![Time route JSON response](screenshots/06-time-route.png)
+   ```bash
+   npm install
+   ```
 
-### 7. About route — JSON response and HTTP 200
+3. Run either server:
 
-![About route response and headers](screenshots/07-about-route.png)
+   ```bash
+   node server.js
+   ```
 
-### 8. Unmatched route — 404 Page Not Found
+   or:
 
-![404 page not found](screenshots/Screenshot%202026-11-02%20095909.png)
+   ```bash
+   node express.js
+   ```
 
-## Result
-
-The plain Node.js HTTP server and the Express.js server were created and tested locally. The Express application responds on the specified routes and returns a 404 response for an unmatched path.
+   Both use port `3000`; stop the currently running server before starting the other.
 
 ## AI Usage Declaration
 
-AI was used **only to prepare and format this README.md file**. The implementation, project setup, execution, and testing of the lab tasks were completed by me.
+AI was used only to prepare and format this `README.md` file. The implementation, execution, and testing of the lab tasks were completed by me.
