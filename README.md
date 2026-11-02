@@ -28,7 +28,7 @@ Lab 1/
 │   ├── Screenshot 2026-11-02 095230.png
 │   ├── Screenshot 2026-11-02 095246.png
 │   ├── Screenshot 2026-11-02 095618.png
-│   └── Screenshot 2026-11-02 095909(1).png
+│   └── Screenshot 2026-11-02 095909.png
 ├── .gitignore
 ├── express.js
 ├── package.json
@@ -50,9 +50,9 @@ The `package.json` file contains project information and dependency details.
 
 ### Screenshots
 
-![Project initialization using npm](<screenshots/Screenshot 2026-11-02 093228.png>)
+![Project initialization using npm](screenshots/Screenshot%202026-11-02%20093228.png)
 
-![Installing Express](<screenshots/Screenshot 2026-11-02 093508.png>)
+![Installing Express](screenshots/Screenshot%202026-11-02%20093508.png)
 
 ## Task 2 — Create a plain Node.js HTTP server
 
@@ -68,7 +68,7 @@ Open [http://localhost:3000](http://localhost:3000) in the browser.
 
 ### Screenshot
 
-![Plain Node.js server response](<screenshots/Screenshot 2026-11-02 093721.png>)
+![Plain Node.js server response](screenshots/Screenshot%202026-11-02%20093721.png)
 
 ## Task 3 — Create an Express server and routes
 
@@ -98,23 +98,23 @@ Test the routes in the browser:
 
 **Root route response**
 
-![Root route response](<screenshots/Screenshot 2026-11-02 094148.png>)
+![Root route response](screenshots/Screenshot%202026-11-02%20094148.png)
 
 **Root route in browser developer tools**
 
-![Root route network response](<screenshots/Screenshot 2026-11-02 095230.png>)
+![Root route network response](screenshots/Screenshot%202026-11-02%20095230.png)
 
 **Time route response**
 
-![Time route response](<screenshots/Screenshot 2026-11-02 095246.png>)
+![Time route response](screenshots/Screenshot%202026-11-02%20095246.png)
 
 **About route response**
 
-![About route response](<screenshots/Screenshot 2026-11-02 095618.png>)
+![About route response](screenshots/Screenshot%202026-11-02%20095618.png)
 
 **404 route response**
 
-![404 page not found response](<screenshots/Screenshot 2026-11-02 095909(1).png>)
+![404 page not found response](screenshots/Screenshot%202026-11-02%20095909.png)
 
 ## How to Run
 
